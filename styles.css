@@ -3,21 +3,37 @@
 }
 
 .nav-link {
-    margin-right: 30px; /* Aumenta el margen derecho */
+    margin-right: 30px;  
  } 
 
 .bg-body-tertiary {
-    /* background-image: linear-gradient( 68.3deg,  rgba(245,177,97,1) 0.4%, rgba(236,54,110,1) 100.2% ); */
-    background: linear-gradient(to right, #9bff64, #40915b);
+    background: linear-gradient(to right, #ffffff, #4aff02);
 }
 
 .navbar-brand, .nav-link {
     color: #070707 !important;
 }
 
-.nav-link:hover {
-    opacity: 0.7;
+.nav-link {
+    position: relative; /* Añade posición relativa para poder posicionar el borde */
+    transition: border-bottom 0.3s ease; /* Transición suave para el borde */
 }
+
+.nav-link::after {
+    content: ''; /* Crea un pseudo-elemento para el borde */
+    position: absolute; /* Posición absoluta para que esté debajo del texto */
+    bottom: -2px; /* Coloca el borde justo debajo del texto */
+    left: 0;
+    width: 0; /* Inicialmente el ancho es 0 para que no sea visible */
+    border-bottom: 2px solid transparent; /* Borde transparente */
+    transition: width 0.3s ease; /* Transición suave para el ancho del borde */
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Aumenta el ancho del borde al pasar el cursor sobre el enlace */
+    border-bottom-color: #0e23e9; /* Color del borde al hacer hover */
+}
+
 
 .ms-auto{
     justify-content: space-between;
@@ -28,4 +44,6 @@
     margin-left: 20px;
     margin-right: 20px;
 }
+
+
 
