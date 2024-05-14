@@ -1,49 +1,37 @@
-.navbar * {
+*{
+    margin: 0;
+    padding: 0;
     font-family: 'Open Sans';
+    overflow-x: hidden;
 }
 
-.nav-link {
-    margin-right: 30px;  
- } 
-
-.bg-body-tertiary {
-    background: linear-gradient(to right, #ffffff, #4aff02);
+header{
+    background-image: linear-gradient(to right, #ffffff, #6ae944);
 }
 
-.navbar-brand, .nav-link {
-    color: #070707 !important;
+.navbar{
+    font-family: monospace;
 }
 
-.nav-link {
-    position: relative; /* Añade posición relativa para poder posicionar el borde */
-    transition: border-bottom 0.3s ease; /* Transición suave para el borde */
+.carousel-item img{
+    max-width: 100%; /* Asegura que no sean más anchos que su contenedor */
+    height: auto;
 }
 
-.nav-link::after {
-    content: ''; /* Crea un pseudo-elemento para el borde */
-    position: absolute; /* Posición absoluta para que esté debajo del texto */
-    bottom: -2px; /* Coloca el borde justo debajo del texto */
-    left: 0;
-    width: 0; /* Inicialmente el ancho es 0 para que no sea visible */
-    border-bottom: 2px solid transparent; /* Borde transparente */
-    transition: width 0.3s ease; /* Transición suave para el ancho del borde */
+.parrafo1{
+    color: #fd007f;
 }
 
-.nav-link:hover::after {
-    width: 100%; /* Aumenta el ancho del borde al pasar el cursor sobre el enlace */
-    border-bottom-color: #0e23e9; /* Color del borde al hacer hover */
+.parrafo2{
+    color: #e78104;
+}
+
+.parrafo3{
+    color: black;
 }
 
 
-.ms-auto{
-    justify-content: space-between;
-}
 
-.me-auto img{
-    height: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
 
 
 
